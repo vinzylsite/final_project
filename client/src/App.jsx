@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { Box } from '@mui/material';
 import theme from './theme';
 
 import Navbar from './components/Navbar';
@@ -20,7 +21,6 @@ import EditVideo from './pages/EditVideo';
 
 import ProtectedRoute from './components/ProtectedRoute';
 
-// simple state to show/hide sidebar on mobile
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const toggleDrawer = () => {
@@ -31,58 +31,74 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Navbar onMenuClick={toggleDrawer} />
-        <Sidebar open={mobileOpen} onClose={toggleDrawer} />
-        <main style={{ marginTop: 64, padding: '1rem' }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/watch/:id" element={<Watch />} />
-            <Route path="/search" element={<SearchResults />} />
-            <Route
-              path="/subscriptions"
-              element={
-                <ProtectedRoute>
-                  <Subscriptions />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/upload"
-              element={
-                <ProtectedRoute>
-                  <Upload />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/profile"
-              element={
-                <ProtectedRoute>
-                  <Profile />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/history"
-              element={
-                <ProtectedRoute>
-                  <History />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/edit/:id"
-              element={
-                <ProtectedRoute>
-                  <EditVideo />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </main>
+        <Box
+          sx={{
+            background: '#0A0E27',
+            minHeight: '100vh',
+            width: '100%',
+          }}
+        >
+          <Navbar onMenuClick={toggleDrawer} />
+          <Sidebar open={mobileOpen} onClose={toggleDrawer} />
+          <Box
+            component="main"
+            sx={{
+              marginTop: 8,
+              padding: '2rem',
+              width: '100%',
+              maxWidth: '100%',
+              overflowX: 'hidden',
+            }}
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/watch/:id" element={<Watch />} />
+              <Route path="/search" element={<SearchResults />} />
+              <Route
+                path="/subscriptions"
+                element={
+                  <ProtectedRoute>
+                    <Subscriptions />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/upload"
+                element={
+                  <ProtectedRoute>
+                    <Upload />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/profile/:id"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/edit/:id"
+                element={
+                  <ProtectedRoute>
+                    <EditVideo />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/history"
+                element={
+                  <ProtectedRoute>
+                    <History />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+          </Box>
+        </Box>
       </Router>
     </ThemeProvider>
   );
