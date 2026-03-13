@@ -72,30 +72,40 @@ export default function VideoCard({ video }) {
           Trending
         </Box>
       </Box>
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Typography
-          variant="subtitle1"
-          noWrap
-          sx={{
-            fontWeight: 600,
-            color: '#E0E0FF',
-            '&:hover': {
-              color: '#FF00FF',
-            },
-          }}
-        >
-          {video.title}
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: '#A0A0E0',
-            noWrap: true,
-            mt: 0.5,
-          }}
-        >
-          {video.channel}
-        </Typography>
+      <CardContent
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          minHeight: 0,
+        }}
+      >
+        <div>
+          <Typography
+            variant="subtitle1"
+            noWrap
+            sx={{
+              fontWeight: 600,
+              color: '#E0E0FF',
+              '&:hover': {
+                color: '#FF00FF',
+              },
+            }}
+          >
+            {video.title}
+          </Typography>
+          <Typography
+            variant="body2"
+            noWrap
+            sx={{
+              color: '#A0A0E0',
+              mt: 0.5,
+            }}
+          >
+            {video.channel}
+          </Typography>
+        </div>
         <Box
           sx={{
             display: 'flex',
