@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 import theme from './theme';
 
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
+import Sidebar, { drawerWidth } from './components/Sidebar';
 
 import Home from './pages/Home';
 import Watch from './pages/Watch';
@@ -48,6 +48,7 @@ function App() {
               width: '100%',
               maxWidth: '100%',
               overflowX: 'hidden',
+              ml: { md: `${drawerWidth}px` },
             }}
           >
             <Routes>
