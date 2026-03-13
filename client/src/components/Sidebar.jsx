@@ -1,8 +1,9 @@
 import React from 'react';
-import { Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Box, Typography } from '@mui/material';
+import { Drawer, List, ListItem, ListItemButton, ListItemText, Toolbar, Box, Typography, useMediaQuery } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 
+const drawerWidth = 260;
 const categories = [
   'All',
   'Music',
@@ -14,9 +15,12 @@ const categories = [
   'Technology',
 ];
 
+export { drawerWidth };
+
 export default function Sidebar({ open, onClose }) {
   const navigate = useNavigate();
   const theme = useTheme();
+  const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
 
   const handleClick = (category) => {
     navigate(`/search?category=${encodeURIComponent(category)}`);
@@ -25,12 +29,16 @@ export default function Sidebar({ open, onClose }) {
 
   return (
     <Drawer
-      variant="temporary"
-      open={open}
+      variant={isDesktop ? 'permanent' : 'temporary'}
+      open={isDesktop ? true : open}
       onClose={onClose}
       ModalProps={{ keepMounted: true }}
       sx={{
+        width: drawerWidth,
+        flexShrink: 0,
         '& .MuiDrawer-paper': {
+          width: drawerWidth,
+          boxSizing: 'border-box',
           background: `linear-gradient(180deg, #1A1F3A 0%, #0A0E27 100%)`,
           borderRight: '2px solid #FF00FF',
           boxShadow: '2px 0 20px rgba(255, 0, 255, 0.2)',
@@ -52,8 +60,8 @@ export default function Sidebar({ open, onClose }) {
           CATEGORIES
         </Typography>
       </Box>
-      <List sx={{ width: 250 }}>
-        {categories.map((cat, index) => (
+      <List sx={{ width: '100%' }}>
+        {categories.map((cat) => (
           <ListItem key={cat} disablePadding>
             <ListItemButton
               onClick={() => handleClick(cat)}
