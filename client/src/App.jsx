@@ -45,8 +45,7 @@ function App() {
             sx={{
               marginTop: 8,
               padding: '2rem',
-              width: '100%',
-              maxWidth: '100%',
+              width: { xs: '100%', md: `calc(100% - ${drawerWidth}px)` },
               overflowX: 'hidden',
               ml: { md: `${drawerWidth}px` },
             }}
