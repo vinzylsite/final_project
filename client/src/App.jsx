@@ -6,7 +6,7 @@ import { Box } from '@mui/material';
 import theme from './theme';
 
 import Navbar from './components/Navbar';
-import Sidebar, { drawerWidth } from './components/Sidebar';
+import Sidebar, { drawerWidth, miniWidth } from './components/Sidebar';
 
 import Home from './pages/Home';
 import Watch from './pages/Watch';
@@ -22,10 +22,12 @@ import EditVideo from './pages/EditVideo';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleDrawer = () => {
-    setMobileOpen((open) => !open);
+    setSidebarOpen((open) => !open);
   };
+
+  const sidebarWidth = sidebarOpen ? drawerWidth : miniWidth;
 
   return (
     <ThemeProvider theme={theme}>
@@ -39,15 +41,16 @@ function App() {
           }}
         >
           <Navbar onMenuClick={toggleDrawer} />
-          <Sidebar open={mobileOpen} onClose={toggleDrawer} />
+          <Sidebar open={sidebarOpen} onClose={toggleDrawer} />
           <Box
             component="main"
             sx={{
               marginTop: 8,
               padding: '2rem',
-              width: { xs: '100%', md: `calc(100% - ${drawerWidth}px)` },
+              width: { xs: '100%', md: `calc(100% - ${sidebarWidth}px)` },
               overflowX: 'hidden',
-              ml: { md: `${drawerWidth}px` },
+              ml: { md: `${sidebarWidth}px` },
+              transition: 'margin-left 0.3s ease, width 0.3s ease',
             }}
           >
             <Routes>
@@ -71,7 +74,7 @@ function App() {
                 }
               />
               <Route
-                path="/profile/:id"
+                path="/profile"
                 element={
                   <ProtectedRoute>
                     <Profile />
