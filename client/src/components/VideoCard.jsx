@@ -16,7 +16,7 @@ export default function VideoCard({ video }) {
       sx={{
         cursor: 'pointer',
         height: '100%',
-        width: '100%',
+        width: '15vw',
         maxWidth: '100%',
         display: 'flex',
         flexDirection: 'column',
