@@ -17,7 +17,7 @@ export default function Register() {
 
   return (
     <Box component="form" onSubmit={handleSubmit} sx={{ maxWidth: 400 }}>
-      <Typography variant="h5" sx={{ mb: 2 }}>Register</Typography>
+      <Typography variant="h5" sx={{ mb: 2 }}>REGISTER</Typography>
       <TextField
         fullWidth
         label="Username"
