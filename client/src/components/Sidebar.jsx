@@ -3,6 +3,8 @@ import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolba
 import { useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HistoryIcon from '@mui/icons-material/History';
+
 
 const drawerWidth = 260;
 const miniWidth = 60;
@@ -31,8 +33,7 @@ export default function Sidebar({ open, onClose }) {
     <Box
       sx={{
         position: 'fixed',
-        left: 0,
-        top: 64,
+        padding:0.5,
         width: open ? drawerWidth : miniWidth,
         height: 'calc(100vh - 64px)',
         background: `linear-gradient(180deg, #1A1F3A 0%, #0A0E27 100%)`,
@@ -105,6 +106,41 @@ export default function Sidebar({ open, onClose }) {
             />}
           </ListItemButton>
         </ListItem>
+         <ListItem disablePadding>
+  <ListItemButton
+    onClick={() => {
+      navigate('/history');
+    }}
+    sx={{
+      color: '#E0E0FF',
+      transition: 'all 0.3s ease',
+      borderLeft: '3px solid transparent',
+      pl: open ? 2.5 : 1,
+      '&:hover': {
+        backgroundColor: 'rgba(255, 0, 255, 0.1)',
+        borderLeftColor: '#FF00FF',
+        color: '#FF00FF',
+        pl: open ? 3 : 1.5,
+        textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
+      },
+    }}
+  >
+    <ListItemIcon sx={{ color: 'inherit', minWidth: 40 }}>
+      <HistoryIcon />
+    </ListItemIcon>
+    {open && (
+      <ListItemText
+        primary="History"
+        primaryTypographyProps={{
+          fontWeight: 500,
+          fontSize: '1rem',
+        }}
+      />
+    )}
+  </ListItemButton>
+</ListItem>
+
+        
       </List>
       {open && (
         <>
