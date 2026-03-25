@@ -4,10 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HistoryIcon from '@mui/icons-material/History';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 
 
-const drawerWidth = 260;
-const miniWidth = 60;
+const drawerWidth = 300;
+const miniWidth = 70;
 const categories = [
   'All',
   'Music',
@@ -37,7 +38,6 @@ export default function Sidebar({ open, onClose }) {
         width: open ? drawerWidth : miniWidth,
         height: 'calc(100vh - 64px)',
         background: `linear-gradient(180deg, #1A1F3A 0%, #0A0E27 100%)`,
-        boxShadow: '2px 0 20px rgba(255, 0, 255, 0.2)',
         transition: 'width 0.3s ease',
         zIndex: 1,
         overflow: 'hidden',
@@ -63,8 +63,14 @@ export default function Sidebar({ open, onClose }) {
               },
             }}
           >
-            <ListItemIcon sx={{ color: 'inherit', minWidth: 40 }}>
-              <HomeIcon />
+            <ListItemIcon 
+              sx={{ color: 'inherit', 
+              minWidth: 40, 
+              mt:1, 
+              mb:1,
+              justifyContent: 'center' 
+              }}>
+              <HomeIcon sx={{ fontSize: 30}}/>
             </ListItemIcon>
             {open && <ListItemText
               primary="Home"
@@ -94,11 +100,17 @@ export default function Sidebar({ open, onClose }) {
               },
             }}
           >
-            <ListItemIcon sx={{ color: 'inherit', minWidth: 40 }}>
-              <AccountCircleIcon />
+            <ListItemIcon 
+              sx={{ color: 'inherit', 
+              minWidth: 40, 
+              mt:1, 
+              mb:1,
+              justifyContent: 'center' 
+            }}>
+              <AccountCircleIcon sx={{ fontSize: 30 }}/>
             </ListItemIcon>
             {open && <ListItemText
-              primary="Account"
+              primary="You"
               primaryTypographyProps={{
                 fontWeight: 500,
                 fontSize: '1rem',
@@ -107,39 +119,86 @@ export default function Sidebar({ open, onClose }) {
           </ListItemButton>
         </ListItem>
          <ListItem disablePadding>
-  <ListItemButton
-    onClick={() => {
-      navigate('/history');
-    }}
-    sx={{
-      color: '#E0E0FF',
-      transition: 'all 0.3s ease',
-      borderLeft: '3px solid transparent',
-      pl: open ? 2.5 : 1,
-      '&:hover': {
-        backgroundColor: 'rgba(255, 0, 255, 0.1)',
-        borderLeftColor: '#FF00FF',
-        color: '#FF00FF',
-        pl: open ? 3 : 1.5,
-        textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
-      },
-    }}
-  >
-    <ListItemIcon sx={{ color: 'inherit', minWidth: 40 }}>
-      <HistoryIcon />
-    </ListItemIcon>
-    {open && (
-      <ListItemText
-        primary="History"
-        primaryTypographyProps={{
-          fontWeight: 500,
-          fontSize: '1rem',
-        }}
-      />
-    )}
-  </ListItemButton>
-</ListItem>
+        
+        <ListItemButton
+                  onClick={() => {
+                    navigate('/history');
+                  }}
+                  sx={{
+                    color: '#E0E0FF',
+                    transition: 'all 0.3s ease',
+                    borderLeft: '3px solid transparent',
+                    pl: open ? 2.5 : 1,
+                    '&:hover': {
+                      backgroundColor: 'rgba(255, 0, 255, 0.1)',
+                      borderLeftColor: '#FF00FF',
+                      color: '#FF00FF',
+                      pl: open ? 3 : 1.5,
+                      textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
+                    },
+                  }}
+        >
+            <ListItemIcon 
+              sx={{ color: 'inherit', 
+              minWidth: 40, 
+              mt:1, 
+              mb:1,
+              justifyContent: 'center' 
+            }}>
+            <HistoryIcon sx={{ fontSize: 30 }}/>
+          </ListItemIcon>
+          {open && (
+            <ListItemText
+              primary="History"
+              primaryTypographyProps={{
+                fontWeight: 500,
+                fontSize: '1rem',
+              }}
+            />
+          )}
+        </ListItemButton>
+      </ListItem>
+        <ListItem disablePadding>
 
+      <ListItemButton
+                  onClick={() => {
+                    navigate('/subscriptions');
+                  }}
+                  sx={{
+                    color: '#E0E0FF',
+                    transition: 'all 0.3s ease',
+                    borderLeft: '3px solid transparent',
+                    pl: open ? 2.5 : 1,
+                    '&:hover': {
+                      backgroundColor: 'rgba(255, 0, 255, 0.1)',
+                      borderLeftColor: '#FF00FF',
+                      color: '#FF00FF',
+                      pl: open ? 3 : 1.5,
+                      textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
+                    },
+                  }}
+        >
+            <ListItemIcon 
+              sx={{ color: 'inherit', 
+              minWidth: 40, 
+              mt:1, 
+              mb:1,
+              justifyContent: 'center' 
+            }}>
+            <SubscriptionsIcon sx={{ fontSize: 30 }}/>
+          </ListItemIcon>
+          {open && (
+            <ListItemText
+              primary="Subscriptions"
+              primaryTypographyProps={{
+                fontWeight: 500,
+                fontSize: '1rem',
+              }}
+            />
+          )}
+        </ListItemButton>
+      </ListItem>
+        <ListItem disablePadding></ListItem>
         
       </List>
       {open && (
