@@ -6,7 +6,6 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HistoryIcon from '@mui/icons-material/History';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 
-
 const drawerWidth = 300;
 const miniWidth = 70;
 const categories = [
