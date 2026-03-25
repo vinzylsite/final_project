@@ -58,7 +58,7 @@ export default function Sidebar({ open, onClose }) {
                 backgroundColor: 'rgba(255, 0, 255, 0.1)',
                 borderLeftColor: '#FF00FF',
                 color: '#FF00FF',
-                pl: open ? 3 : 1.5,
+                pl: open ? 2.5 : 1,
                 textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
               },
             }}
@@ -95,7 +95,7 @@ export default function Sidebar({ open, onClose }) {
                 backgroundColor: 'rgba(255, 0, 255, 0.1)',
                 borderLeftColor: '#FF00FF',
                 color: '#FF00FF',
-                pl: open ? 3 : 1.5,
+                pl: open ? 2.5 : 1,
                 textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
               },
             }}
@@ -133,7 +133,7 @@ export default function Sidebar({ open, onClose }) {
                       backgroundColor: 'rgba(255, 0, 255, 0.1)',
                       borderLeftColor: '#FF00FF',
                       color: '#FF00FF',
-                      pl: open ? 3 : 1.5,
+                      pl: open ? 2.5 : 1,
                       textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
                     },
                   }}
@@ -173,7 +173,7 @@ export default function Sidebar({ open, onClose }) {
                       backgroundColor: 'rgba(255, 0, 255, 0.1)',
                       borderLeftColor: '#FF00FF',
                       color: '#FF00FF',
-                      pl: open ? 3 : 1.5,
+                      pl: open ? 2.5 : 1,
                       textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
                     },
                   }}
@@ -198,7 +198,7 @@ export default function Sidebar({ open, onClose }) {
           )}
         </ListItemButton>
       </ListItem>
-        <ListItem disablePadding></ListItem>
+          <ListItem disablePadding></ListItem>
         
       </List>
       {open && (
