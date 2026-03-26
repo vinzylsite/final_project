@@ -4,7 +4,7 @@ const videos = [
   {
     id: '1',
     title: '🎮 EPIC Gaming Setup Tour 2024',
-    channel: 'Pro Gamer Hub',
+    channel: 'Pro Gamer Squad',
     views: '2.4M views',
     timestamp: '2 days ago',
     thumbnail: 'https://picsum.photos/id/1011/320/180',
