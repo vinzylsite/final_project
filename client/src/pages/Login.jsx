@@ -23,10 +23,10 @@ export default function Login() {
         elevation={0}
         sx={{
           background: `linear-gradient(135deg, #1A1F3A 0%, #2D1B69 100%)`,
-          border: '2px solid #FF00FF',
+          
           borderRadius: 2,
           p: 4,
-          boxShadow: '0 0 30px rgba(255, 0, 255, 0.3), inset 0 0 20px rgba(124, 77, 255, 0.1)',
+          boxShadow: '0 0 13px rgba(0, 0, 0, 0.42), inset 0 0 20px rgba(124, 77, 255, 0.1)',
         }}
       >
         <Typography
@@ -34,7 +34,7 @@ export default function Login() {
           sx={{
             mb: 1,
             fontWeight: 800,
-            color: '#00D9FF',
+            color: '#ffffff',
             textShadow: 'none',
             textAlign: 'center',
             letterSpacing: 2,
