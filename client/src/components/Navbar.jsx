@@ -104,13 +104,13 @@ export default function Navbar({ onMenuClick }) {
           sx={{
             flexGrow: 0,
             mr: 4,
-            color: '#00D9FF',
+            color: '#b4d2ff',
             fontWeight: 800,
             textShadow: 'none',
             letterSpacing: 2,
             cursor: 'pointer',
             '&:hover': {
-              textShadow: '0 0 10px #00D9FF',
+              textShadow: '0 0 10px #dd8cc9',
             },
           }}
           onClick={() => navigate('/')}
@@ -155,14 +155,17 @@ export default function Navbar({ onMenuClick }) {
             ml: 2,
             width: 40,
             height: 40,
+            color: '#E0E0FF',
             background: `linear-gradient(135deg, #FF00FF 0%, #7C4DFF 100%)`,
-            border: '2px solid #00D9FF',
-            boxShadow: '0 0 10px rgba(255, 0, 255, 0.4)',
+            
+            boxShadow: '0 0 10px rgba(124, 77, 255, 0.5)',
             cursor: 'pointer',
           }}
-        >
+           onClick={() => navigate('/profile')}
+        > 
           U
         </Avatar>
+        
       </Toolbar>
     </AppBar>
   );
