@@ -23,7 +23,6 @@ export default function Login() {
         elevation={0}
         sx={{
           background: `linear-gradient(135deg, #1A1F3A 0%, #2D1B69 100%)`,
-          
           borderRadius: 2,
           p: 4,
           boxShadow: '0 0 13px rgba(0, 0, 0, 0.42), inset 0 0 20px rgba(124, 77, 255, 0.1)',
@@ -65,7 +64,6 @@ export default function Login() {
               '& .MuiOutlinedInput-root': {
                 borderColor: '#7C4DFF',
                 '&:hover': {
-                  borderColor: '#FF00FF',
                   boxShadow: '0 0 10px rgba(255, 0, 255, 0.3)',
                 },
               },
@@ -82,7 +80,6 @@ export default function Login() {
               '& .MuiOutlinedInput-root': {
                 borderColor: '#7C4DFF',
                 '&:hover': {
-                  borderColor: '#FF00FF',
                   boxShadow: '0 0 10px rgba(255, 0, 255, 0.3)',
                 },
               },
@@ -97,9 +94,8 @@ export default function Login() {
               fontWeight: 700,
               fontSize: '1.1rem',
               py: 1.5,
-              boxShadow: '0 0 20px rgba(255, 0, 255, 0.5)',
               '&:hover': {
-                boxShadow: '0 0 30px rgba(255, 0, 255, 0.8)',
+                boxShadow: '0 0 13px rgba(255, 0, 255, 0.8)',
               },
             }}
           >
@@ -116,7 +112,7 @@ export default function Login() {
           }}
         >
           Don't have an account?{' '}
-          <Link to="/register" style={{ color: '#FF00FF', fontWeight: 700 }}>
+          <Link to="/register" style={{ color: '#a837dd', fontWeight: 600, color: '#ffffff' }}>
             Sign Up Now
           </Link>
         </Typography>
