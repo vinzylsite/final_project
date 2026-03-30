@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       width: '40ch',
       '&:focus': {
         width: '55ch',
-        color: '#FF00FF',
+        color: '#f5f5f5',
       },
     },
   },
@@ -90,7 +90,7 @@ export default function Navbar({ onMenuClick }) {
           onClick={onMenuClick}
           sx={{
             mr: 2,
-            color: '#FF00FF',
+            color: '#ffffff',
             '&:hover': {
               textShadow: '0 0 10px #FF00FF',
             },
