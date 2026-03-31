@@ -40,7 +40,7 @@ export default function CategoryChips({ selectedCategory = 'All', onCategoryChan
                 ? `linear-gradient(135deg, #7C4DFF 0%, #FF00FF 100%)`
                 : `linear-gradient(135deg, #2D1B69 0%, #1A1F3A 100%)`,
               border: selectedCategory === cat
-                ? '1px solid #00D9FF'
+                ? '1px solid #FF00FF'
                 : '1.5px solid #7C4DFF',
               color: '#E0E0FF',
               fontSize: '0.95rem',
@@ -53,7 +53,7 @@ export default function CategoryChips({ selectedCategory = 'All', onCategoryChan
               '&:hover': {
                 background: `linear-gradient(135deg, #7C4DFF 0%, #FF00FF 100%)`,
                 boxShadow: '0 0 20px rgba(255, 0, 255, 0.5)',
-                border: '1px solid #00D9FF',
+                borderColor: '#FF00FF',
               },
             }}
           />
