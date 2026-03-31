@@ -56,7 +56,7 @@ const theme = createTheme({
     },
     h5: {
       fontWeight: 600,
-      color: '#00D9FF',
+      color: '#ffffff',
     },
     h6: {
       fontWeight: 600,
@@ -152,7 +152,7 @@ const theme = createTheme({
             opacity: 0.7,
           },
           '&:focus': {
-            color: '#FF00FF',
+            color: '#ffffff',
           },
         },
       },
@@ -200,14 +200,7 @@ const theme = createTheme({
         },
       },
     },
-    MuiAvatar: {
-      styleOverrides: {
-        root: {
-          border: '2px solid #FF00FF',
-          boxShadow: '0 0 10px rgba(255, 0, 255, 0.4)',
-        },
-      },
-    },
+   
     MuiIconButton: {
       styleOverrides: {
         root: {
