@@ -25,7 +25,7 @@ export default function VideoCard({ video }) {
         transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
           transform: 'translateY(-8px) scale(1.02)',
-          boxShadow: `0 0 30px rgba(255, 0, 255, 0.6), 0 0 50px rgba(124, 77, 255, 0.3), inset 0 0 20px rgba(124, 77, 255, 0.1)`,
+          boxShadow: `0 0 13px rgba(255, 0, 255, 0.6), 0 0 50px rgba(124, 77, 255, 0.3), inset 0 0 20px rgba(124, 77, 255, 0.1)`,
           borderColor: '#FF00FF',
         },
       }}
@@ -60,7 +60,7 @@ export default function VideoCard({ video }) {
             top: 8,
             right: 8,
             backgroundColor: 'rgba(255, 0, 255, 0.9)',
-            color: '#0A0E27',
+            color: '#ffffff',
             padding: '4px 8px',
             borderRadius: '4px',
             fontSize: '0.75rem',
