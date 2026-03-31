@@ -81,43 +81,6 @@ export default function Sidebar({ open, onClose }) {
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
-          <ListItemButton
-            onClick={() => {
-              navigate('/profile');
-            }}
-            sx={{
-              color: '#E0E0FF',
-              transition: 'all 0.3s ease',
-              borderLeft: '3px solid transparent',
-              pl: open ? 2.5 : 1,
-              '&:hover': {
-                backgroundColor: 'rgba(255, 0, 255, 0.1)',
-                borderLeftColor: '#FF00FF',
-                color: '#FF00FF',
-                pl: open ? 2.5 : 1,
-                textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
-              },
-            }}
-          >
-            <ListItemIcon 
-              sx={{ color: 'inherit', 
-              minWidth: 40, 
-              mt:1, 
-              mb:1,
-              justifyContent: 'center' 
-            }}>
-              <AccountCircleIcon sx={{ fontSize: 30 }}/>
-            </ListItemIcon>
-            {open && <ListItemText
-              primary="You"
-              primaryTypographyProps={{
-                fontWeight: 500,
-                fontSize: '1rem',
-              }}
-            />}
-          </ListItemButton>
-        </ListItem>
-         <ListItem disablePadding>
         
         <ListItemButton
                   onClick={() => {
@@ -197,7 +160,45 @@ export default function Sidebar({ open, onClose }) {
           )}
         </ListItemButton>
       </ListItem>
-          <ListItem disablePadding></ListItem>
+          <ListItem disablePadding>
+      
+      <ListItemButton
+            onClick={() => {
+              navigate('/profile');
+            }}
+            sx={{
+              color: '#E0E0FF',
+              transition: 'all 0.3s ease',
+              borderLeft: '3px solid transparent',
+              pl: open ? 2.5 : 1,
+              '&:hover': {
+                backgroundColor: 'rgba(255, 0, 255, 0.1)',
+                borderLeftColor: '#FF00FF',
+                color: '#FF00FF',
+                pl: open ? 2.5 : 1,
+                textShadow: '0 0 10px rgba(255, 0, 255, 0.5)',
+              },
+            }}
+          >
+            <ListItemIcon 
+              sx={{ color: 'inherit', 
+              minWidth: 40, 
+              mt:1, 
+              mb:1,
+              justifyContent: 'center' 
+            }}>
+              <AccountCircleIcon sx={{ fontSize: 30 }}/>
+            </ListItemIcon>
+            {open && <ListItemText
+              primary="You"
+              primaryTypographyProps={{
+                fontWeight: 500,
+                fontSize: '1rem',
+              }}
+            />}
+          </ListItemButton>
+        </ListItem>
+         <ListItem disablePadding></ListItem>
         
       </List>
       {open && (
