@@ -90,7 +90,7 @@ export default function Login() {
             type="submit"
             sx={{
               background: `linear-gradient(135deg, #FF00FF 0%, #7C4DFF 100%)`,
-              color: '#0A0E27',
+              color: '#ffffff',
               fontWeight: 700,
               fontSize: '1.1rem',
               py: 1.5,
