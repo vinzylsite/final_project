@@ -108,9 +108,6 @@ export default function Navbar({ onMenuClick }) {
             textShadow: 'none',
             letterSpacing: 2,
             cursor: 'pointer',
-            '&:hover': {
-              textShadow: '0 0 10px #dd8cc9',
-            },
           }}
           onClick={() => navigate('/')}
         >
@@ -131,24 +128,18 @@ export default function Navbar({ onMenuClick }) {
             />
           </Search>
         </Box>
-
+        
         <Box sx={{ flexGrow: 1 }} />
 
         <Button
-          color="inherit"
+          variant='contained'
           sx={{
-            ml: 2,
-            background: `linear-gradient(135deg, #7C4DFF 0%, #9C27B0 100%)`,
-            boxShadow: '0 0 10px rgba(124, 77, 255, 0.5)',
-            '&:hover': {
-              boxShadow: '0 0 20px rgba(255, 0, 255, 0.6)',
-            },
+            ml: 2, 
           }}
           onClick={() => navigate('/upload')}
         >
           Upload
         </Button>
-
         <Avatar
           sx={{
             ml: 2,
@@ -159,7 +150,7 @@ export default function Navbar({ onMenuClick }) {
             boxShadow: '0 0 10px rgba(124, 77, 255, 0.5)',
             cursor: 'pointer',
             '&:hover': {
-              boxShadow: '0 0 20px rgba(255, 0, 255, 0.6)',
+              boxShadow: '0 0 13px rgba(124, 77, 255, 0.8)',
             },
           }}
            onClick={() => navigate('/profile')}
