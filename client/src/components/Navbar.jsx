@@ -149,6 +149,24 @@ export default function Navbar({ onMenuClick }) {
           Upload
         </Button>
 
+        <Avatar
+          sx={{
+            ml: 2,
+            width: 40,
+            height: 40,
+            color: '#E0E0FF',
+            background: `linear-gradient(135deg, #FF00FF 0%, #7C4DFF 100%)`,
+            boxShadow: '0 0 10px rgba(124, 77, 255, 0.5)',
+            cursor: 'pointer',
+            '&:hover': {
+              boxShadow: '0 0 20px rgba(255, 0, 255, 0.6)',
+            },
+          }}
+           onClick={() => navigate('/profile')}
+        > 
+          U
+        </Avatar>
+        
       </Toolbar>
     </AppBar>
   );
