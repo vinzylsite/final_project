@@ -100,12 +100,9 @@ const theme = createTheme({
           },
         },
         outlined: {
-          borderColor: '#FF00FF',
-          color: '#FF00FF',
           '&:hover': {
-            borderColor: '#FF66FF',
             backgroundColor: 'rgba(255, 0, 255, 0.1)',
-            boxShadow: '0 0 15px rgba(255, 0, 255, 0.4)',
+            boxShadow: '0 0 13px rgba(255, 0, 255, 0.4)',
           },
         },
       },
@@ -115,10 +112,10 @@ const theme = createTheme({
         root: {
           background: `linear-gradient(135deg, #1A1F3A 0%, #2D1B69 100%)`,
           border: '1px solid rgba(124, 77, 255, 0.3)',
-          boxShadow: '0 0 15px rgba(124, 77, 255, 0.2)',
+          boxShadow: '0 0 13px rgba(124, 77, 255, 0.2)',
           transition: 'all 0.3s ease',
           '&:hover': {
-            boxShadow: '0 0 25px rgba(255, 0, 255, 0.5), 0 0 40px rgba(124, 77, 255, 0.3)',
+            boxShadow: '0 0 13px rgba(255, 0, 255, 0.5), 0 0 40px rgba(124, 77, 255, 0.3)',
             borderColor: '#FF00FF',
             transform: 'translateY(-4px)',
           },
@@ -135,7 +132,7 @@ const theme = createTheme({
           '&:hover': {
             background: `linear-gradient(135deg, #7C4DFF 0%, #FF00FF 100%)`,
             borderColor: '#FF00FF',
-            boxShadow: '0 0 15px rgba(255, 0, 255, 0.6)',
+            boxShadow: '0 0 13px rgba(255, 0, 255, 0.6)',
           },
         },
       },
