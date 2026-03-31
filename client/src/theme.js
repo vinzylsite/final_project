@@ -96,7 +96,7 @@ const theme = createTheme({
           boxShadow: '0 0 10px rgba(124, 77, 255, 0.5)',
           '&:hover': {
             background: `linear-gradient(135deg, #9C27B0 0%, #7C4DFF 100%)`,
-            boxShadow: '0 0 20px rgba(124, 77, 255, 0.8)',
+            boxShadow: '0 0 13px rgba(124, 77, 255, 0.8)',
           },
         },
         outlined: {
