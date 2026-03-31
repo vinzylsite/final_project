@@ -15,9 +15,9 @@ export default function VideoPlayer({ src, title }) {
           height: 0,
           overflow: 'hidden',
           borderRadius: 2,
-          border: '2px solid #7C4DFF',
-          boxShadow: '0 0 30px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(124, 77, 255, 0.1)',
-          mb: 2,
+          border: '1px solid #7C4DFF',
+          boxShadow: '0 0 13px rgba(255, 0, 255, 0.4), inset 0 0 20px rgba(124, 77, 255, 0.1)',
+          mb: 5,
           backgroundColor: '#0A0E27',
         }}
       >
