@@ -165,7 +165,7 @@ const theme = createTheme({
             },
             '&.Mui-focused': {
               borderColor: '#FF00FF',
-              boxShadow: '0 0 20px rgba(255, 0, 255, 0.5)',
+              boxShadow: '0 0 13px rgba(255, 0, 255, 0.5)',
             },
           },
         },
