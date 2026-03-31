@@ -48,11 +48,11 @@ export default function CategoryChips({ selectedCategory = 'All', onCategoryChan
               cursor: 'pointer',
               transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               boxShadow: selectedCategory === cat 
-                ? '0 0 15px rgba(0, 217, 255, 0.4)'
+                ? '0 0 13px rgba(0, 217, 255, 0.4)'
                 : 'none',
               '&:hover': {
                 background: `linear-gradient(135deg, #7C4DFF 0%, #FF00FF 100%)`,
-                boxShadow: '0 0 20px rgba(255, 0, 255, 0.5)',
+                boxShadow: '0 0 13px rgba(255, 0, 255, 0.5)',
                 borderColor: '#FF00FF',
               },
             }}
