@@ -22,9 +22,7 @@ export default function VideoCard({ video }) {
         flexDirection: 'column',
         background: `linear-gradient(135deg, ${theme.palette.background.paper} 0%, rgba(124, 77, 255, 0.1) 100%)`,
         border: `1px solid rgba(124, 77, 255, 0.3)`,
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         '&:hover': {
-          transform: 'translateY(-8px) scale(1.02)',
           boxShadow: `0 0 13px rgba(255, 0, 255, 0.6), 0 0 50px rgba(124, 77, 255, 0.3), inset 0 0 20px rgba(124, 77, 255, 0.1)`,
           borderColor: '#FF00FF',
         },
@@ -35,25 +33,48 @@ export default function VideoCard({ video }) {
           position: 'relative',
           overflow: 'hidden',
           backgroundColor: 'rgba(124, 77, 255, 0.1)',
+          height: 180,
         }}
       >
-        <CardMedia
+         <CardMedia
           component="img"
           image={video.thumbnail}
           alt={video.title}
-          onError={(e) => {
-            e.target.style.backgroundColor = 'rgba(124, 77, 255, 0.2)';
-          }}
           sx={{
-            height: 180,
+            height: '100%',
+            width: '100%',
             objectFit: 'cover',
-            transition: 'transform 0.3s ease',
-            backgroundColor: 'rgba(124, 77, 255, 0.1)',
-            '&:hover': {
-              transform: 'scale(1.1)',
-            },
+            transition: 'opacity 0.3s ease',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 1,
           }}
         />
+
+        <CardMedia
+            component="video"
+            src={video.src}
+            muted
+            loop
+            playsInline
+            onMouseEnter={(e) => e.target.play()}
+            onMouseLeave={(e) => e.target.pause()}
+            sx={{
+              height: '100%',
+              width: '100%',
+              objectFit: 'cover',
+              opacity: 0,
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              zIndex: 2,
+              '&:hover': {
+                opacity: 1,
+              },
+            }}
+          />
+
         <Box
           sx={{
             position: 'absolute',
@@ -74,7 +95,6 @@ export default function VideoCard({ video }) {
       </Box>
       <CardContent
         sx={{
-          flexGrow: 1,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
@@ -123,3 +143,4 @@ export default function VideoCard({ video }) {
   );
 }
  
+
