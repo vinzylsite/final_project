@@ -23,7 +23,7 @@ export default function CommentSection({ initialComments = [] }) {
           placeholder="Add a public comment..."
           value={text}
           onChange={(e) => setText(e.target.value)}
-        />
+      />
         <Button onClick={handlePost} sx={{ mt: 1 }} variant="contained">
           Comment
         </Button>
