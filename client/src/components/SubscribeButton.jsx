@@ -21,19 +21,19 @@ export default function SubscribeButton({ channelId, onSubscribe }) {
       onClick={handleClick}
       startIcon={isSubscribed ? <NotificationsActiveIcon /> : <NotificationsIcon />}
       sx={{
+        mb: 2,
         background: isSubscribed
           ? 'transparent'
           : `linear-gradient(135deg, #FF00FF 0%, #7C4DFF 100%)`,
-        color: isSubscribed ? '#FF00FF' : '#0A0E27',
+        color: isSubscribed ? '#e9e9e9' : '#0A0E27',
         borderColor: '#FF00FF',
-        border: '2px solid #FF00FF',
-        fontWeight: 700,
+        border: '1px solid #FF00FF',
+        fontWeight: 500,
         fontSize: '1rem',
         px: 3,
         py: 1,
-        textTransform: 'uppercase',
+        textTransform: 'capitalize',
         letterSpacing: 1,
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         boxShadow: isSubscribed
           ? '0 0 15px rgba(255, 0, 255, 0.3)'
           : '0 0 20px rgba(255, 0, 255, 0.5)',
