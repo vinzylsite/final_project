@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Box } from '@mui/material';
+import { Box, Toolbar } from '@mui/material';
 import theme from './theme';
 
 import Navbar from './components/Navbar';
@@ -45,7 +45,6 @@ function App() {
           <Box
             component="main"
             sx={{
-              marginTop: 8,
               padding: '2rem',
               width: { xs: '100%', md: `calc(100% - ${sidebarWidth}px)` },
               overflowX: 'hidden',
@@ -53,6 +52,7 @@ function App() {
               transition: 'margin-left 0.3s ease, width 0.3s ease',
             }}
           >
+            <Toolbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/watch/:id" element={<Watch />} />
